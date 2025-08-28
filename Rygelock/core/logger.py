@@ -59,3 +59,4 @@ class Logger:
         if entered_hash == FAKE_LOG_PASSWORD_HASH:
             return True
         return False
+
