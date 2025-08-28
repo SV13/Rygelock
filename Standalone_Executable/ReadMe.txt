@@ -1,0 +1,1 @@
+An executable file of Rygelock has been archived in rar. Use Winrar to extract them. Right click on Rygelock.part1.rar and click extract the file.
