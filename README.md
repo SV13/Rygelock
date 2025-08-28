@@ -17,10 +17,11 @@ Rygelock was developed as part of my Final Year Project. It is a comprehensive s
 ## 📦 Project Structure
 ```
 Rygelock/
-├─ core/                 # algorithms, encryption, engine scripts
-├─ ui/                   # UI-based scripts
-├─ utils/                # helpers (audio, config, validation)
 ├─ assets/               # icons, logos, system audio
+├─ core/                 # algorithms, encryption, engine scripts assets/
+├─ ui/                   # UI-based scripts core/
+├─ utils/                # helpers (audio, config, validation)
+├─ rygel.py                # Main Script
 ```
 
 ## 🧰 Getting Started (Developers)
@@ -46,10 +47,11 @@ python rygel.py
 
 
 ## 🧪 Verifying Standalone Checksums
-**MD5:**	ac5b3e5c462e00afc535179a5447219a
-**SHA-1:**	a750bf80e5ba515eae4acbcdc9e32f477fcaef91
-**SHA-256:**	14ef45e2f055aed8146a5649d30a0471edb1f1dde1c8335a291bb18f36f9e979
+- **MD5:**	ac5b3e5c462e00afc535179a5447219a
+- **SHA-1:**	a750bf80e5ba515eae4acbcdc9e32f477fcaef91
+- **SHA-256:**	14ef45e2f055aed8146a5649d30a0471edb1f1dde1c8335a291bb18f36f9e979
 
 
 ## 📝 Documentation
 See **`Rygelock_User_Guide.pdf`** for a comprehensive guide with screenshots.
+
