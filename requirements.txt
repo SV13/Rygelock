@@ -1,0 +1,13 @@
+PyQt5
+Pillow
+numpy
+scipy
+PyWavelets
+mutagen
+pydub
+cryptography
+pycryptodome
+psutil
+pygame
+simpleaudio
+customtkinter
