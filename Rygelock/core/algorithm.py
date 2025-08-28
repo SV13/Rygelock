@@ -99,3 +99,4 @@ def stego_extract(carrier_path, output_path=None):
     # Placeholder — to be implemented
     pass
 
+
