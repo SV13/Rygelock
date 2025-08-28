@@ -19,8 +19,8 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
 # --- Constants for Metadata/Tags ---
-FAKE_TAG = b"d_dlm_!@#$&*"
-REAL_TAG = b"g_dlm_!@#$&*"
+FAKE_TAG = b"d_alm_!$&@#*"
+REAL_TAG = b"g_alm_!$&@#*"
 METADATA_PAYLOAD_DELIMITER = b'::RYG_META_END::'
 
 MATRYOSHKA_SALTS = [
@@ -274,4 +274,5 @@ def extract_payload(file_path: str, password: str = None, key_data: bytes = None
 
     except Exception as e:
         return {"status": "error", "message": f"Extraction failed. Incorrect password or key. Details: {e}"}
+
 
