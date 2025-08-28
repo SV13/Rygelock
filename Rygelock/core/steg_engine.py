@@ -276,3 +276,4 @@ def extract_payload(file_path: str, password: str = None, key_data: bytes = None
         return {"status": "error", "message": f"Extraction failed. Incorrect password or key. Details: {e}"}
 
 
+
