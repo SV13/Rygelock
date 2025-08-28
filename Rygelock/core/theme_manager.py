@@ -99,3 +99,4 @@ def light_stylesheet():
             border-bottom: 2px solid #007acc;
         }
     """
+
