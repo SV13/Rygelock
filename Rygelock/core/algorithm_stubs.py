@@ -870,3 +870,4 @@ class LSBImageHandler:
         """Saves the modified image to the output path, always as PNG for data integrity."""
         self.image.save(output_path, "PNG")
         print(f"[LSB Handler] Saved stego image to {output_path}")
+
