@@ -67,3 +67,4 @@ def prepare_fake_output(config):
 
         except Exception as e:
             print(f"[!] Failed to write fake key: {key_path} - {e}")
+
