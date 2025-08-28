@@ -181,4 +181,5 @@ def apply_demasking(data: bytes, password: str) -> bytes:
     cipher = ChaCha20.new(key=masking_key, nonce=nonce)
     original_data = cipher.decrypt(masked_data)
 
+
     return original_data
