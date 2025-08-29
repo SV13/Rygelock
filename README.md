@@ -47,9 +47,9 @@ python rygel.py
 
 
 ## 🧪 Verifying Standalone Checksums
-- **MD5:**	ac5b3e5c462e00afc535179a5447219a
-- **SHA-1:**	a750bf80e5ba515eae4acbcdc9e32f477fcaef91
-- **SHA-256:**	14ef45e2f055aed8146a5649d30a0471edb1f1dde1c8335a291bb18f36f9e979
+- **MD5:**	027b37e23eff71bbb89afdfb8ccca2fe
+- **SHA-1:**	7b182c654a400e5950d20289840dfe11adf7c5cf
+- **SHA-256:**	bdd4f7b541dde8445a79e50f3d8ccdeac184fcaa05a8976f5a57bab5eef1df52
 
 
 ## 📝 Documentation
