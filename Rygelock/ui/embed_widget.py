@@ -51,7 +51,7 @@ class EmbedWidget(QWidget):
         layout.addLayout(header_layout)
 
         grid = QGridLayout()
-        carrier_label = QLabel("Carrier File(s)")
+        carrier_label = QLabel("Carrier File")
         carrier_label.setToolTip("Files that will carry your hidden data")
         self.carrier_table = QTableWidget(0, 1)
         self.carrier_table.setHorizontalHeaderLabels(["File Path"])
@@ -66,7 +66,7 @@ class EmbedWidget(QWidget):
         grid.addWidget(self.carrier_table, 1, 0)
         grid.addWidget(add_carrier_btn, 2, 0)
 
-        payload_label = QLabel("Payload File(s)")
+        payload_label = QLabel("Payload File")
         payload_label.setToolTip("Files you want to hide inside the carrier")
         self.payload_display = QTextEdit()
         self.payload_display.setReadOnly(True)
@@ -85,7 +85,7 @@ class EmbedWidget(QWidget):
 
         encryption_groupbox = QGroupBox("Encryption & Layers")
         encryption_col = QVBoxLayout(spacing=3)
-        encryption_label = QLabel("Encryption (Optional)")
+        encryption_label = QLabel("Encryption Selection")
         encryption_label.setFont(QFont("Segoe UI", 10, QFont.Bold))
 
         self.encryption_aes = QRadioButton("AES")
@@ -225,7 +225,8 @@ class EmbedWidget(QWidget):
                     return
             row = self.carrier_table.rowCount()
             self.carrier_table.insertRow(row)
-            self.carrier_table.setItem(row, 0, QTableWidgetItem(file_path))
+            self.carrier_table.setRowCount(1)  # Ensure there is exactly one row
+            self.carrier_table.setItem(0, 0, QTableWidgetItem(file_path))
             self.validate_embedding_inputs()  # Validate after adding carrier
 
     def add_payload_file(self):
@@ -247,9 +248,9 @@ class EmbedWidget(QWidget):
         """
         # 1. Check for presence of essential files
         if self.carrier_table.rowCount() == 0:
-            return False, "Please add at least one carrier file."
+            return False, "Please add a carrier file."
         if not self.payload_display.toPlainText().strip():
-            return False, "Please add at least one genuine payload file."
+            return False, "Please add a genuine payload file."
 
         # 2. Check password requirements for encryption
         selected_encryption = self.encryption_group.checkedButton().text()
@@ -260,6 +261,8 @@ class EmbedWidget(QWidget):
         fake_payloads_exist = bool(self.fake_payload_display.toPlainText().strip())
         if fake_payloads_exist and not self.fake_password_input.text().strip():
             return False, "A fake payload has been added, but no fake password was provided."
+        if self.fake_password_input.text().strip() and not fake_payloads_exist:
+            return False, "You entered a Fake password but no decoy payload was added. Please add a decoy payload or clear the fake password."
 
         # 4. Check that passwords are not identical
         real_password = self.enc_password_input.text().strip()

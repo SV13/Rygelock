@@ -65,7 +65,7 @@ class ExtractWidget(QWidget):
 
         grid = QGridLayout()
 
-        carrier_label = QLabel("Carrier File(s)")
+        carrier_label = QLabel("Stego File for Extraction")
         carrier_label.setFont(QFont("Segoe UI", 10, QFont.Bold))
         self.carrier_btn = QPushButton("Browse Stego File")
         self.carrier_btn.clicked.connect(self.select_carrier_file)
@@ -134,7 +134,7 @@ class ExtractWidget(QWidget):
         layout.addLayout(grid)
 
         password_layout = QVBoxLayout()
-        self.password_label = QLabel("Password (Optional)")
+        self.password_label = QLabel("Password")
         self.password_label.setFont(QFont("Segoe UI", 10, QFont.Bold))
         self.password_input = QLineEdit()
         self.password_input.setEchoMode(QLineEdit.Password)
